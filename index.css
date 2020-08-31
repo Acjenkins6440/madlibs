@@ -1,0 +1,33 @@
+.container{
+  width: 450px;
+  height: 650px;
+  margin: 0 auto;
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 20px;
+  font-size: 28px;
+}
+.container h2{
+  text-align: center;
+}
+.error{
+  color: red;
+  font-size: 18px;
+  height: 20px;
+  margin: 0 auto;
+}
+.row {
+  margin: 20px 0;
+}
+.row input{
+  height: 28px;
+  width: 90%;
+}
+label{
+  
+}
+.form-buttons input{
+  margin: 0 auto;
+  height: 28px;
+}
