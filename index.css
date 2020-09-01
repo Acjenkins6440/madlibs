@@ -1,6 +1,6 @@
 .container{
   width: 450px;
-  height: 650px;
+  height: 700px;
   margin: 0 auto;
   background-color: lightgrey;
   border: 1px solid black;
@@ -24,10 +24,11 @@
   height: 28px;
   width: 90%;
 }
-label{
-  
+.form-buttons{
+  text-align: center;
 }
-.form-buttons input{
-  margin: 0 auto;
+.form-buttons > input{
+  margin: 0 20px;
   height: 28px;
+  width: 20%;
 }
