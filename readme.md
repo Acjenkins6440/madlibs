@@ -1,0 +1,2 @@
+# Mad Lib
+This project is an exercise in building a simple PHP-powered form.  The only package used is a codesniffer to keep index.php up to PSR-2 standards. Validation is server-only, with no javascript.

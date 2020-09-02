@@ -1,5 +1,11 @@
 <?PHP
 $madLibMessage = "";
+$number = "";
+$verb = "";
+$pluralNoun = "";
+$singleNoun = "";
+$city = "";
+
 if ($_POST && isset($_POST['submit'])) {
     $number = $_POST['number'];
     $verb = $_POST['verb'];
@@ -53,9 +59,9 @@ if ($_POST && isset($_POST['submit'])) {
         <div class="row">
           <label>Number greater than one </label>
           <br />
-          <input type="number" step="1" maxlength="10" name="number">
+          <input type="number" step="1" maxlength="10" value="<?php echo $number ?>" name="number">
           <p class="error">
-            <?php if (isset($error['number']) && $error['number'] !== "") {
+            <?php if (isset($error['number'])) {
                 echo $error['number'];
             }
             ?>
@@ -64,9 +70,9 @@ if ($_POST && isset($_POST['submit'])) {
         <div class="row">
           <label>Verb ending in '-ing' </label>
           <br />
-          <input type="text" maxlength="50" name="verb">
+          <input type="text" maxlength="50" value="<?php echo $verb ?>" name="verb">
           <p class="error">
-            <?php if (isset($error['verb']) && $error['verb'] !== "") {
+            <?php if (isset($error['verb'])) {
                 echo $error['verb'];
             }
             ?>
@@ -75,9 +81,9 @@ if ($_POST && isset($_POST['submit'])) {
         <div class="row">
           <label>Plural noun </label>
           <br />
-          <input type="text" maxlength="50" name="pluralNoun">
+          <input type="text" maxlength="50" value="<?php echo $pluralNoun ?>" name="pluralNoun">
           <p class="error">
-            <?php if (isset($error['pluralNoun']) && $error['pluralNoun'] !== "") {
+            <?php if (isset($error['pluralNoun'])) {
                 echo $error['pluralNoun'];
             }
             ?>
@@ -86,9 +92,9 @@ if ($_POST && isset($_POST['submit'])) {
         <div class="row">
           <label>Singular noun </label>
           <br />
-          <input type="text" maxlength="50" name="singleNoun">
+          <input type="text" maxlength="50" value="<?php echo $singleNoun ?>" name="singleNoun">
           <p class="error">
-            <?php if (isset($error['singleNoun']) && $error['singleNoun'] !== "") {
+            <?php if (isset($error['singleNoun'])) {
                 echo $error['singleNoun'];
             }
             ?>
@@ -97,24 +103,18 @@ if ($_POST && isset($_POST['submit'])) {
         <div class="row">
           <label>City </label>
           <br />
-          <input type="text" maxlength="50" name="city">
+          <input type="text" maxlength="50" value="<?php echo $city ?>" name="city">
           <p class="error">
-            <?php if (isset($error['city']) && $error['city'] !== "") {
+            <?php if (isset($error['city'])) {
                 echo $error['city'];
             }
             ?>
           </p>
         </div>
         <div class="form-buttons">
-          <input type="submit" name="submit" value="Send"><input type="reset" value="Clear">
+          <input type="submit" name="submit" value="Submit"><input type="reset" value="Clear">
         </div>
       </div>
-      <?php
-        function clearErrors()
-        {
-            $errors = array();
-        }
-        ?>
       <br />
       <div class="form-buttons">
         <input type="submit" name="Clear errors" value="Reset">
